@@ -6,7 +6,7 @@
 /*   By: igilbert <igilbert@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 19:37:30 by ivan              #+#    #+#             */
-/*   Updated: 2024/11/04 13:13:35 by igilbert         ###   ########.fr       */
+/*   Updated: 2024/11/04 14:41:39 by igilbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,12 +62,3 @@ char	*ft_itoa(int n)
 	ret = itoa2(ret, nb, len, signe);
 	return (ret);
 }
-
-/*
-#include <stdio.h>
-
-int	main()
-{
-	printf("%s", ft_itoa(-456));
-	return (0);
-}*/
