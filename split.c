@@ -6,7 +6,7 @@
 /*   By: igilbert <igilbert@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 19:37:46 by ivan              #+#    #+#             */
-/*   Updated: 2024/11/04 14:42:16 by igilbert         ###   ########.fr       */
+/*   Updated: 2024/11/04 14:46:27 by igilbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ char	*ft_strndup(const char *s1, int len)
 	dup[i] = '\0';
 	return (dup);
 }
-
+/*
 int	count_words(char c, char *str)
 {
 	int		count;
@@ -54,6 +54,26 @@ int	count_words(char c, char *str)
 	if (str[i - 1] == c)
 		count--;
 	return (count);
+}*/
+int    count_words(char *s, char c)
+{
+    int    i;
+    int    count;
+
+    i = 0;
+    count = 0;
+    while (s[i])
+    {
+        while (s[i] == c)
+            i++;
+        if (s[i] != '\0')
+            count++;
+        while (s[i] != c && s[i])
+            i++;
+    }
+    if (s[i - 1] != c)
+        count++;
+    return (count);
 }
 
 char	**ft_split(char const *str, char c)
