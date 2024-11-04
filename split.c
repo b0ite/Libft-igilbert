@@ -6,7 +6,7 @@
 /*   By: igilbert <igilbert@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 19:37:46 by ivan              #+#    #+#             */
-/*   Updated: 2024/11/04 13:50:11 by igilbert         ###   ########.fr       */
+/*   Updated: 2024/11/04 13:54:04 by igilbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,10 +65,10 @@ char	**ft_split(char const *str, char c)
 	s = 0;
 	e = 0;
 	k = 0;
-	res = malloc(sizeof(char *) * count_words(c, str));
+	res = malloc(sizeof(char *) * count_words(c, (char *)str));
 	if (res == NULL)
 		return (NULL);
-	while (k < count_words(c, str) && str[s])
+	while (k < count_words(c, (char *)str) && str[s])
 	{
 		while (str[e] == c && str[e])
 			e++;
