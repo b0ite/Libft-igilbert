@@ -6,7 +6,7 @@
 /*   By: igilbert <igilbert@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 23:19:30 by igilbert          #+#    #+#             */
-/*   Updated: 2024/11/04 23:25:30 by igilbert         ###   ########.fr       */
+/*   Updated: 2024/11/04 23:29:00 by igilbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,10 @@
 
 t_list	*ft_lstnew(void *content)
 {
-	t_list	new;
+	t_list	*new;
 	
-	new = malloc(sizeof(t_list) * 1);
-	
+	new = malloc(sizeof(t_list));
+	new->content = content;
+	new->next = NULL;
+	return (new);
 }
