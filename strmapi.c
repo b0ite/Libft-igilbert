@@ -6,7 +6,7 @@
 /*   By: igilbert <igilbert@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 14:55:07 by igilbert          #+#    #+#             */
-/*   Updated: 2024/11/04 15:00:27 by igilbert         ###   ########.fr       */
+/*   Updated: 2024/11/04 15:01:16 by igilbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,6 @@ char    *ft_strmapi(char const *s, char (*f)(unsigned int, char))
         res[i] = f(i, s[i]);
         i++;
     }
+    res[i] = '\0';
     return (res);
 }
