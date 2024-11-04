@@ -6,7 +6,7 @@
 /*   By: igilbert <igilbert@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 19:37:46 by ivan              #+#    #+#             */
-/*   Updated: 2024/11/04 14:37:49 by igilbert         ###   ########.fr       */
+/*   Updated: 2024/11/04 14:40:46 by igilbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int	count_words(char c, char *str)
 		if (str[i] == c)
 		{
 			count++;
-			while (str[i] == c)
+			while (str[i] == c && str[i])
 				i++;
 		}
 		else
