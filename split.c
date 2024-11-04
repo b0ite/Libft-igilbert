@@ -6,7 +6,7 @@
 /*   By: igilbert <igilbert@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 19:37:46 by ivan              #+#    #+#             */
-/*   Updated: 2024/11/04 14:20:29 by igilbert         ###   ########.fr       */
+/*   Updated: 2024/11/04 14:21:59 by igilbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,6 @@ int	count_words(char c, char *str)
 		else
 			i++;
 	}
-	printf("%d\n", count);
 	return (count);
 }
 
@@ -64,7 +63,7 @@ char	**ft_split(char const *str, char c)
 
 	s = 0;
 	k = 0;
-	res = malloc(sizeof(char *) * count_words(c, (char *)str));
+	res = malloc(sizeof(char *) * count_words(c, (char *)str) + 1);
 	if (res == NULL)
 		return (NULL);
 	while (k < count_words(c, (char *)str) && str[s])
@@ -77,6 +76,6 @@ char	**ft_split(char const *str, char c)
 		res[k] = ft_strndup((char *)str + s, e - s);
 		k++;
 	}
-	res[k] = NULL;
+	res[k] = 0;
 	return (res);
 }
