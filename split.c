@@ -6,7 +6,7 @@
 /*   By: igilbert <igilbert@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 19:37:46 by ivan              #+#    #+#             */
-/*   Updated: 2024/11/04 14:21:59 by igilbert         ###   ########.fr       */
+/*   Updated: 2024/11/04 14:22:26 by igilbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,7 @@ char	**ft_split(char const *str, char c)
 			e++;
 		res[k] = ft_strndup((char *)str + s, e - s);
 		k++;
+		s = e;
 	}
 	res[k] = 0;
 	return (res);
