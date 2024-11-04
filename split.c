@@ -6,7 +6,7 @@
 /*   By: igilbert <igilbert@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 19:37:46 by ivan              #+#    #+#             */
-/*   Updated: 2024/11/04 14:47:02 by igilbert         ###   ########.fr       */
+/*   Updated: 2024/11/04 14:49:13 by igilbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,48 +32,26 @@ char	*ft_strndup(const char *s1, int len)
 	dup[i] = '\0';
 	return (dup);
 }
-/*
-int	count_words(char c, char *str)
+
+int	count_words(char c, char *s)
 {
-	int		count;
-	size_t	i;
+	int	i;
+	int	count;
 
 	i = 0;
-	count = 1;
-	while (str[i])
+	count = 0;
+	while (s[i])
 	{
-		if (str[i] == c)
-		{
+		while (s[i] == c)
+			i++;
+		if (s[i] != '\0')
 			count++;
-			while (str[i] == c && str[i])
-				i++;
-		}
-		else
+		while (s[i] != c && s[i])
 			i++;
 	}
-	if (str[i - 1] == c)
-		count--;
+	if (s[i - 1] != c)
+		count++;
 	return (count);
-}*/
-int    count_words(char c, char *s)
-{
-    int    i;
-    int    count;
-
-    i = 0;
-    count = 0;
-    while (s[i])
-    {
-        while (s[i] == c)
-            i++;
-        if (s[i] != '\0')
-            count++;
-        while (s[i] != c && s[i])
-            i++;
-    }
-    if (s[i - 1] != c)
-        count++;
-    return (count);
 }
 
 char	**ft_split(char const *str, char c)
