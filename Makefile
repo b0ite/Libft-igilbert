@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ivan <ivan@student.42.fr>                  +#+  +:+       +#+         #
+#    By: igilbert <igilbert@student.42perpignan.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/22 22:37:54 by ivan              #+#    #+#              #
-#    Updated: 2024/10/22 22:37:55 by ivan             ###   ########.fr        #
+#    Updated: 2024/11/04 13:52:31 by igilbert         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,5 +29,8 @@ fclean : clean
 	rm -rf $(OBJ)
 
 re : fclean all
+
+dev :
+	make fclean;git add .; git commit -m 'auto update';git push;cd ../libft-unit-test; make f;cd ../libft; make fclean
 
 .PHONY : all clean fclean re mclean
