@@ -6,7 +6,7 @@
 /*   By: igilbert <igilbert@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:50:51 by igilbert          #+#    #+#             */
-/*   Updated: 2024/11/05 16:10:29 by igilbert         ###   ########.fr       */
+/*   Updated: 2024/11/05 16:11:26 by igilbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,4 +20,5 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 		ft_lstclear(&(*lst)->next, del);
 	del((*lst)->content);
 	free(*lst);
+	*lst = NULL;
 }
