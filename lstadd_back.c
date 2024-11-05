@@ -6,7 +6,7 @@
 /*   By: igilbert <igilbert@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 00:07:39 by igilbert          #+#    #+#             */
-/*   Updated: 2024/11/05 01:42:02 by igilbert         ###   ########.fr       */
+/*   Updated: 2024/11/05 01:43:02 by igilbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 
 	start = *lst;
 	if (!lst || !new)
-		return (NULL);
+		return ;
 	while (start->next != NULL)
 		start = start->next;
 	start->next = new;
