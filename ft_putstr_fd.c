@@ -6,7 +6,7 @@
 /*   By: igilbert <igilbert@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 19:36:10 by igilbert          #+#    #+#             */
-/*   Updated: 2024/11/06 14:43:26 by igilbert         ###   ########.fr       */
+/*   Updated: 2024/11/06 14:44:03 by igilbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_putstr_fd(char *str, int fd)
 	int	i;
 
 	i = 0;
-	if (!str || !fd)
+	if (!str)
 		return ;
 	while (str[i])
 	{
