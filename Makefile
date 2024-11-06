@@ -6,7 +6,7 @@
 #    By: igilbert <igilbert@student.42perpignan.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/06 12:54:31 by igilbert          #+#    #+#              #
-#    Updated: 2024/11/06 13:12:23 by igilbert         ###   ########.fr        #
+#    Updated: 2024/11/06 13:20:14 by igilbert         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,4 +44,4 @@ re : fclean all
 dev :
 	make fclean;git add .; git commit -m 'auto update';git push;cd ../libft-unit-test; make f;cd ../libft; make fclean
 
-.PHONY : all clean fclean re mclean
+.PHONY : all clean fclean re mclean bonus dev
