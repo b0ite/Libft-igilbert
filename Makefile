@@ -1,15 +1,3 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: igilbert <igilbert@student.42perpignan.    +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/11/06 12:54:31 by igilbert          #+#    #+#              #
-#    Updated: 2024/11/06 13:20:14 by igilbert         ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
 SRC = atoi.c bzero.c calloc.c isalnum.c isalpha.c isascii.c isdigit.c itoa.c \
 isprint.c memchr.c memcmp.c memcpy.c memmove.c memset.c putchar_fd.c split.c \
 putendl_fd.c putnbr_fd.c putstr_fd.c strchr.c strdup.c strjoin.c strlcat.c \
