@@ -14,7 +14,7 @@ all : $(NAME)
 	@true
 
 $(NAME) :
-	cc -I $(FLAGS) -c $(FLAGS) $(SRC)
+	gcc -I $(FLAGS) -c $(FLAGS) $(SRC)
 	ar -rcs $(NAME) $(OBJ)
 
 bonus :
