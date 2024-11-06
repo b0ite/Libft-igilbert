@@ -6,7 +6,7 @@
 /*   By: igilbert <igilbert@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 20:06:28 by ivan              #+#    #+#             */
-/*   Updated: 2024/11/06 15:35:52 by igilbert         ###   ########.fr       */
+/*   Updated: 2024/11/06 15:40:59 by igilbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,6 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 
 	i = 0;
 	j = 0;
-	if (!haystack)
-		return (NULL);
 	len_n = ft_strlen(needle);
 	if (len_n == 0)
 		return ((char *)haystack);
