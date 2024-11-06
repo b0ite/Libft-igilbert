@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strtrim.c                                          :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: igilbert <igilbert@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 19:38:03 by ivan              #+#    #+#             */
-/*   Updated: 2024/11/04 13:13:14 by igilbert         ###   ########.fr       */
+/*   Updated: 2024/11/06 14:48:34 by igilbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	i = 0;
 	j = ft_strlen(s1);
+	if (!s1 || !set)
+		return (NULL);
 	while (check(s1[i], set) && s1[i])
 		i++;
 	while (check(s1[j - 1], set) && j > i)
