@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   split.c                                            :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: igilbert <igilbert@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 19:37:46 by ivan              #+#    #+#             */
-/*   Updated: 2024/11/04 14:49:13 by igilbert         ###   ########.fr       */
+/*   Updated: 2024/11/06 14:46:39 by igilbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,8 @@ char	**ft_split(char const *str, char c)
 
 	s = 0;
 	k = 0;
+	if (!str)
+		return (NULL);
 	res = (char **)malloc(sizeof(char *) * (count_words(c, (char *)str) + 1));
 	if (res == NULL)
 		return (NULL);
