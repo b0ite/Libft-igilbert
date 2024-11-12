@@ -30,25 +30,27 @@ char	*ft_strndup(const char *s1, int len)
 	return (dup);
 }
 
-int	count_words(char c, char *s)
+int	count_words(int c, char const *s)
 {
 	int	i;
-	int	count;
+	int	j;
+	int	in;
 
 	i = 0;
-	count = 0;
+	j = 0;
+	in = 0;
 	while (s[i])
 	{
-		while (s[i] == c)
-			i++;
-		if (s[i] != '\0')
-			count++;
-		while (s[i] != c && s[i])
-			i++;
+		if (s[i] != (char)c && in != 1)
+		{
+			in = 1;
+			j++;
+		}
+		if (s[i] == (char)c && in == 1)
+			in = 0;
+		i++;
 	}
-	if (s[i - 1] != c)
-		count++;
-	return (count);
+	return (j);
 }
 
 char	**ft_split(char const *str, char c)
