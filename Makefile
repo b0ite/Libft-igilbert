@@ -23,9 +23,9 @@ bonus :
 
 clean :
 	rm -f $(NAME)
+	rm -rf $(OBJ) $(OBJ_BONUS)
 
 fclean : clean
-	rm -rf $(OBJ) $(OBJ_BONUS)
 
 re : fclean all
 

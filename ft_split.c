@@ -6,7 +6,7 @@
 /*   By: igilbert <igilbert@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 19:37:46 by ivan              #+#    #+#             */
-/*   Updated: 2024/11/06 15:16:01 by igilbert         ###   ########.fr       */
+/*   Updated: 2024/11/07 18:20:29 by igilbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,13 @@
 char	*ft_strndup(const char *s1, int len)
 {
 	char	*dup;
-	size_t	size;
 	size_t	i;
 
 	i = 0;
-	size = len + 1;
-	dup = malloc(size);
+	dup = malloc(len + 1);
 	if (dup == NULL)
 		return (NULL);
-	while (i < size - 1)
+	while (i < (size_t)len)
 	{
 		dup[i] = s1[i];
 		i++;

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   calloc.c                                           :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: igilbert <igilbert@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 19:37:24 by ivan              #+#    #+#             */
-/*   Updated: 2024/11/04 13:13:37 by igilbert         ###   ########.fr       */
+/*   Updated: 2024/11/07 17:47:13 by igilbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_calloc(size_t count, size_t size)
 	size_t	i;
 
 	i = 0;
-	al = malloc(size * count);
+	al = malloc(size * (count + 1));
 	if (al == NULL)
 		return (NULL);
 	while (i < count)
