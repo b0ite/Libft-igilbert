@@ -18,12 +18,19 @@ void	*ft_calloc(size_t count, size_t size)
 	size_t	i;
 
 	i = 0;
+	if (count * size >= 2147483647 || ((int)count < 0 && (int)size < 0))
+		return (NULL);
+	if (count == 0 || size == 0)
+	{
+		al = malloc(sizeof(char));
+		return (al);
+	}
 	al = malloc(size * (count));
 	if (al == NULL)
 		return (NULL);
-	while (i < count)
+	while (i < count * size)
 	{
-		((int *)al)[i] = 0;
+		((char *)al)[i] = 0;
 		i++;
 	}
 	return (al);
